@@ -8,5 +8,26 @@
         android:id="@+id/calculateFragment"
         android:name="com.example.calculation.CalculateFragment"
         android:label="fragment_calculate"
-        tools:layout="@layout/fragment_calculate" />
+        tools:layout="@layout/fragment_calculate" >
+        <action
+            android:id="@+id/action_calculateFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.calculation.SecondFragment"
+        android:label="SecondFragment" >
+        <argument
+            android:name="addition"
+            app:argType="string" />
+        <argument
+            android:name="subtraction"
+            app:argType="string" />
+        <argument
+            android:name="division"
+            app:argType="string" />
+        <argument
+            android:name="multiplication"
+            app:argType="string" />
+    </fragment>
 </navigation>
